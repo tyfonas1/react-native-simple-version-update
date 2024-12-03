@@ -1,10 +1,14 @@
 {
   "name": "react-native-simple-version-update",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-native-simple-version-update is a lightweight and easy-to-use custom React Native hook that checks if your app needs to be updated by comparing the installed version with the latest version available on the App Store (iOS) or Google Play Store (Android). The hook provides the current version, the latest live version, and a boolean flag indicating whether an update is required. It also includes functionality to redirect users to the appropriate store page for updating the app.",
   "main": "index.ts",
   "scripts": {
     "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tyfonas1/react-native-simple-version-update"
   },
   "keywords": [
     "react-native",
