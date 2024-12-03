@@ -12,35 +12,30 @@ A custom React Native hook to check for app version updates on the App Store (iO
 
 To install the package, follow these steps:
 
-1. Make sure you have `react-native-device-info` installed in your project. If you haven't already, run:
-
+1. Add the package to your project:
    ```bash
-   npm install react-native-device-info
-
-2. Add the package to your project:
-   ```bash
-   npm install your-package-name
+   npm install react-native-simple-version-update
    
 Or if you're using Yarn:
     ```bash
     
-    yarn add your-package-name
+    yarn add react-native-simple-version-update
     
 Usage
-1. Import the Hook
+2. Import the Hook
 In your component file, import the useVersionUpdate hook:
 
     ```javascript
     
-    import useVersionUpdate from 'your-package-name';
+    import useVersionUpdate from 'react-native-simple-version-update';
 
-2. Use the Hook in Your Component
+3. Use the Hook in Your Component
 In your component (e.g., App.js or App.tsx), call the useVersionUpdate hook:
 
     ```javascript
     import React, { useEffect } from 'react';
     import { Text, View, Modal, Button } from 'react-native';
-    import useVersionUpdate from 'your-package-name';
+    import useVersionUpdate from 'react-native-simple-version-update';
     
     const App = () => {
       const { currentVersion, liveVersion, needUpdate, handleUpdate } = useVersionUpdate();
@@ -67,7 +62,7 @@ In your component (e.g., App.js or App.tsx), call the useVersionUpdate hook:
     
     export default App;
 
-3. Customize the Modal and Update Logic
+4. Customize the Modal and Update Logic
 You can adjust the modal and update logic to fit the design and behavior you need for your app. The example above shows a simple modal that will pop up if an update is needed, and clicking "Update Now" will open the app's store page.
 
 Contributing
