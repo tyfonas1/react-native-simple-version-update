@@ -27,6 +27,7 @@ In your component file, import the useVersionUpdate hook:
     ```javascript
     import useVersionUpdate from 'react-native-simple-version-update';
     ```
+   
 3. Use the Hook in Your Component
 In your component (e.g., App.js or App.tsx), call the useVersionUpdate hook:
 
