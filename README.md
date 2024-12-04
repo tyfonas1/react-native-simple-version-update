@@ -13,15 +13,21 @@ A custom React Native hook to check for app version updates on the App Store (iO
 To install the package, follow these steps:
 
 1. Add the package to your project:
+   
    ```bash
    npm install react-native-simple-version-update
    ```
+   
 Or if you're using Yarn:
-    ```bash
-    yarn add react-native-simple-version-update
-    ```
+
+   ```bash
+   yarn add react-native-simple-version-update
+   ```
+    
 Usage
+
 2. Import the Hook
+
 In your component file, import the useVersionUpdate hook:
 
    ```javascript
