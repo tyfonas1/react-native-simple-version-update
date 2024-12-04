@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import DeviceInfo from 'react-native-device-info';
-import { Linking, Platform } from 'react-native';
+import {Linking, Platform} from 'react-native';
 
 const useVersionUpdate = () => {
     const [currentVersion, setCurrentVersion] = useState<string | null>(null);
@@ -43,19 +43,23 @@ const useVersionUpdate = () => {
                 }
             } else {
                 const response = await fetch(
-                    `https://play.google.com/store/apps/details?id=${bundleId}`,
+                    `https://play.google.com/store/apps/details?id=${bundleId}&hl=en&gl=US`,
                 );
                 const html = await response.text();
-                const regex =
-                    /<div[^>]*>\s*Current\s+Version\s*<\/div>\s*<span[^>]*>\s*([0-9.]+)\s*<\/span>/;
-                const match = regex.exec(html);
-
-                if (match && match[1]) {
-                    setUpdateUrl(
-                        `https://play.google.com/store/apps/details?id=${bundleId}`,
-                    );
-                    return match[1];
+                const match = html.match(/Current Version.+?>([\d.-]+)<\/span>/);
+                let latestVersion = null;
+                if (match) {
+                    latestVersion = match[1].trim();
                 }
+                const matchNewLayout = html.match(/\[\[\["([\d-.]+?)"\]\]/);
+                if (matchNewLayout) {
+                    latestVersion = matchNewLayout[1].trim();
+                }
+                setLiveVersion(latestVersion);
+                setUpdateUrl(
+                    `https://play.google.com/store/apps/details?id=${bundleId}`,
+                );
+                return latestVersion;
             }
             return null;
         } catch (error) {
