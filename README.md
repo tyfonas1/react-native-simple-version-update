@@ -15,20 +15,18 @@ To install the package, follow these steps:
 1. Add the package to your project:
    ```bash
    npm install react-native-simple-version-update
-   
+   ```
 Or if you're using Yarn:
     ```bash
-    
     yarn add react-native-simple-version-update
-    
+    ```
 Usage
 2. Import the Hook
 In your component file, import the useVersionUpdate hook:
 
     ```javascript
-    
     import useVersionUpdate from 'react-native-simple-version-update';
-
+    ```
 3. Use the Hook in Your Component
 In your component (e.g., App.js or App.tsx), call the useVersionUpdate hook:
 
@@ -61,7 +59,7 @@ In your component (e.g., App.js or App.tsx), call the useVersionUpdate hook:
     };
     
     export default App;
-
+    ```
 4. Customize the Modal and Update Logic
 You can adjust the modal and update logic to fit the design and behavior you need for your app. The example above shows a simple modal that will pop up if an update is needed, and clicking "Update Now" will open the app's store page.
 
