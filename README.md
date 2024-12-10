@@ -15,13 +15,13 @@ To install the package, follow these steps:
 1. Add the package to your project:
    
    ```bash
-   npm install react-native-simple-version-update
+   npm install react-native-simple-version-update react-native-device-info
    ```
    
 Or if you're using Yarn:
 
    ```bash
-   yarn add react-native-simple-version-update
+   yarn add react-native-simple-version-update react-native-device-info
    ```
     
 Usage
