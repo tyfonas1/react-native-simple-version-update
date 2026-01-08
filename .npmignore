@@ -1,0 +1,25 @@
+# Source files
+index.ts
+tsconfig.json
+
+# Development files
+.gitignore
+.npmignore
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies (should not be published)
+node_modules/
+
+# Testing
+coverage/
+.nyc_output/
